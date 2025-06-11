@@ -1,0 +1,6 @@
+node_modules/
+.env
+altschool-key.pem
+*.log
+.DS_Store
+
