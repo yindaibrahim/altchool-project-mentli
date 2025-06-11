@@ -111,11 +111,9 @@ mentli/
 
 ## Submission Details
 
-- **GitHub Repo:** [https://github.com/YOUR_USERNAME/mentli](https://github.com/YOUR_USERNAME/mentli)
+- **GitHub Repo:** [https://github.com/yindaibrahim/altchool-project-mentli](https://github.com/yindaibrahim/altchool-project-mentli)
 - **Public IP:** [http://16.171.24.246](http://16.171.24.246)
-- **Student:** Oyindamola Ibrahim
 - **Program:** Cloud Engineering (Tinyuka 2024)
-- **Submission Date:** [Insert Date]
 
 All setup and troubleshooting steps are detailed above. Logs and command history available upon request.
 
