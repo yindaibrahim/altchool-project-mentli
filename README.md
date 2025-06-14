@@ -1,99 +1,110 @@
 # AltSchool Cloud Engineering Exam Project: Professional Web Server Deployment
 
 **Name:** Oyindamola Ibrahim  
-**AltSchool ID:** ALT/SOE/024/5808. 
+**AltSchool ID:** ALT/SOE/024/5808  
 **Program:** Cloud Engineering (Tinyuka 2024)
 
 ---
 
 ## Project Title: Mentli – The Future of Peer-to-Peer Business Coaching
 
-This project demonstrates full-cycle cloud engineering by deploying a secure, scalable web application on AWS EC2. It involves a custom landing page hosted via an Nginx reverse proxy, backed by a Node.js server, and configured with production-ready features.
+This project demonstrates a complete cloud-native deployment using AWS, Nginx, and domain integration with SSL. It includes setting up an EC2 instance, an Nginx reverse proxy, a Node.js server, DNS routing with Cloudflare, and SSL (Let's Encrypt) setup.
 
-Mentli is a cloud-native platform concept that connects entrepreneurs for structured peer coaching. This project simulates a real-world SaaS deployment workflow — from server provisioning and configuration to app deployment and security hardening.
+Mentli is a platform idea that enables peer-to-peer business coaching. This project reflects what a real-world cloud deployment for a startup would look like from scratch.
 
 ---
 
-## Live Deployment
+## 🌐 Live Deployment
 
-- **Public IP:** [http://16.171.24.246](http://16.171.24.246)
-- **Secure Endpoint:** *(SSL not yet configured – domain pending)*
+- **Custom Domain:** [https://yindaibrahim.xyz](https://yindaibrahim.xyz)
+- **Public IP (for testing):** [http://16.171.24.246](http://16.171.24.246)
 
 ![Mentli Screenshot](public/landing-page.png)
 
 ---
 
-## Technical Implementation
+## ⚙️ Technical Implementation
 
-### 1. Infrastructure Provisioning
+### 1. Infrastructure & Server Setup
 
-- EC2 instance running Ubuntu 22.04 LTS (Free Tier eligible)
-- Provisioned using SSH key (`altschool-key.pem`)
-- Security group configured to allow:
-  - Port 22 (SSH) for remote access
-  - Port 80 (HTTP) for web traffic
-  - Port 443 (HTTPS) for SSL (planned)
+- EC2 (Ubuntu 22.04) provisioned in `eu-north-1` region
+- Security Groups configured:
+  - **Launch-Wizard SG:** allows SSH, HTTP, HTTPS
+  - **ALB SG:** allows HTTP (80) from 0.0.0.0/0
+- Application Load Balancer created for better traffic routing
+- Subnets across multiple AZs in same VPC
 
-### 2. Web Server Setup
+### 2. App & Web Server Configuration
 
-- Installed and configured Nginx as a reverse proxy
-- Node.js app running on port `3000`
-- Nginx forwards incoming traffic to the Node.js app
-- Static files (HTML, CSS, images) served from `/public` directory
+- Node.js + Express app on port `3000`
+- Nginx reverse proxy on port `80` and `443`
+- Landing page served via `/public` directory
+- PM2 used to keep the Node.js server running
 
-### 3. Application Deployment
+### 3. Domain & DNS Configuration
 
-- Built a responsive landing page using HTML5 and TailwindCSS
-- Integrated subtle CSS animations for smooth transitions
-- Backend: Node.js + Express for routing and serving static content
-- PM2 is used to manage and persist the app process across reboots
+- Domain purchased from Dynadot: `yindaibrahim.xyz`
+- Nameservers updated to Cloudflare:
+  - `lady.ns.cloudflare.com`
+  - `rory.ns.cloudflare.com`
+- DNS records:
+  - `A` record for root domain pointing to ALB IPs
+  - `CNAME` for `www` pointing to root
 
-### 4. Security Configuration
+### 4. SSL/HTTPS Configuration
 
-- UFW firewall configured to allow only essential ports
-- Nginx headers added for basic protection:
+- Let's Encrypt (Certbot) installed on EC2 instance
+- SSL certificate successfully issued for domain
+- Nginx updated to include:
   ```nginx
-  add_header X-Frame-Options "SAMEORIGIN";
-  add_header X-Content-Type-Options "nosniff";
-  add_header Strict-Transport-Security "max-age=63072000" always;
+  listen 443 ssl;
+  ssl_certificate /etc/letsencrypt/live/yindaibrahim.xyz/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/yindaibrahim.xyz/privkey.pem;
+  include /etc/letsencrypt/options-ssl-nginx.conf;
+  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
   ```
+- HTTP → HTTPS redirection added for both `www` and root domain
 
 ---
 
-## Troubleshooting & Lessons Learned
+## 🧪 Troubleshooting & Lessons Learned
 
-| Problem | Resolution |
-|--------|-------------|
-| Node.js not responding on curl | Ensured app bound to `0.0.0.0` instead of `localhost` |
-| EC2 refused SSH connection | Corrected PEM key permissions with `chmod 400` |
-| Static image not loading | Used `scp` to copy image into `/public` directory |
-| Nginx not showing latest file | Cleared browser cache and reloaded server |
-| PM2 restarting frequently | Checked logs with `pm2 logs` and resolved syntax errors |
-
----
-
-## Project Concept: Mentli
-
-**Pitch:**  
-Traditional mentorship is often unstructured and difficult to scale. Mentli introduces a cloud-native solution where business coaching becomes a two-sided marketplace—entrepreneurs can monetize their experience while founders receive targeted, actionable advice.
-
-**Why It Matters:**  
-- Converts lived experience into economic value  
-- Enables distributed, on-demand mentorship  
-- Built on scalable, secure cloud infrastructure
+| Issue | Solution |
+|-------|----------|
+| Dynadot redirection page showed | Nameservers updated to Cloudflare |
+| SSL errors (HTTPS not secure) | Installed Certbot and reconfigured Nginx |
+| Cloudflare 522 errors | Opened port 443 in security group and verified Nginx |
+| Too many redirects | Caused by SSL mode mismatch (Fixed by aligning Full/Strict with Nginx setup) |
+| Certbot errors | Fixed broken Nginx syntax, reloaded and tested configuration |
+| ALB not routing traffic | Target group reattached to EC2 instance and passed health checks |
+| Deployment breaking with repo rename | Preserved remote link via `git remote set-url` and pushed cleanly |
 
 ---
 
-## Future Enhancements
+## 💡 Project Concept: Mentli
 
-- Acquire a domain name and secure the app using Let's Encrypt SSL (Certbot)
-- Add CI/CD automation using GitHub Actions
-- Enable logging and metrics with AWS CloudWatch or Prometheus
-- Use Docker and ECS for containerized, scalable deployments
+**Overview:**  
+A structured peer-to-peer business coaching platform. Entrepreneurs mentor each other in a marketplace environment.
+
+**Value:**  
+- Monetizes experience  
+- Promotes community-driven growth  
+- Supports scale and flexibility with cloud-native infrastructure
 
 ---
 
-## Directory Structure
+## 🛠️ What's Left / Future Enhancements
+
+- [ ] Add GitHub Actions for CI/CD
+- [ ] Use Docker to containerize the Node app
+- [ ] Enable centralized logging via CloudWatch
+- [ ] Add firewall hardening (fail2ban, etc.)
+- [ ] Automate SSL renewal via cron
+- [ ] Clean up DNS redundancy in Cloudflare
+
+---
+
+## 📁 Directory Structure
 
 ```
 mentli/
@@ -101,7 +112,7 @@ mentli/
 ├── public/
 │   ├── index.html          # Landing page
 │   ├── style.css           # Tailwind styles
-│   └── pfp.jpg             # Static image
+│   └── landing-page.png    # Updated screenshot
 ├── pm2.config.js
 ├── package.json
 └── README.md
@@ -109,16 +120,12 @@ mentli/
 
 ---
 
-## Submission Details
+## 🔗 Submission Details
 
 - **GitHub Repo:** [https://github.com/yindaibrahim/altchool-project-mentli](https://github.com/yindaibrahim/altchool-project-mentli)
-- **Public IP:** [http://16.171.24.246](http://16.171.24.246)
-- **Program:** Cloud Engineering (Tinyuka 2024)
-
-All setup and troubleshooting steps are detailed above. Logs and command history available upon request.
+- **Deployed App:** [https://yindaibrahim.xyz](https://yindaibrahim.xyz)
 
 ---
 
-Oyindamola Ibrahim  
+**Oyindamola Ibrahim**  
 Cloud & DevOps Engineer  
-AltSchool Africa
