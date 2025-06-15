@@ -122,7 +122,7 @@ mentli/
 
 ## 🔗 Submission Details
 
-- **GitHub Repo:** [https://github.com/yindaibrahim/altchool-project-mentli](https://github.com/yindaibrahim/altchool-project-mentli)
+- **GitHub Repo:** [https://github.com/yindaibrahim/altschool-project-mentli](https://github.com/yindaibrahim/altschool-project-mentli)
 - **Deployed App:** [https://yindaibrahim.xyz](https://yindaibrahim.xyz)
 
 ---
