@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentli - The Scalable Peer Coaching Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
+
         .animate-float {
             animation: float 6s ease-in-out infinite;
         }
+
         .gradient-text {
             background: linear-gradient(90deg, #4f46e5, #c026d3);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
+
         .gradient-bg {
             background: linear-gradient(135deg, #4f46e5 0%, #c026d3 100%);
         }
+
         .card-hover {
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
         .feature-icon {
             transition: all 0.3s ease;
         }
+
         .feature-card:hover .feature-icon {
             transform: scale(1.1);
             color: #4f46e5;
         }
+
         .profile-img {
             border-radius: 20px;
             box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.2), 0 10px 10px -5px rgba(79, 70, 229, 0.1);
@@ -45,19 +61,24 @@
         }
     </style>
 </head>
+
 <body class="font-['Inter'] bg-gray-50 text-gray-800 antialiased">
     <!-- Animated Background Elements -->
     <div class="fixed inset-0 overflow-hidden -z-10">
-        <div class="absolute top-20 left-20 w-64 h-64 rounded-full bg-purple-100 opacity-20 blur-3xl animate-float"></div>
-        <div class="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-indigo-100 opacity-20 blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute top-20 left-20 w-64 h-64 rounded-full bg-purple-100 opacity-20 blur-3xl animate-float">
+        </div>
+        <div class="absolute bottom-20 right-20 w-64 h-64 rounded-full bg-indigo-100 opacity-20 blur-3xl animate-float"
+            style="animation-delay: 2s;"></div>
     </div>
 
     <!-- Navigation -->
     <nav class="py-6 px-6 lg:px-12 bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 gradient-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 gradient-text" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
                 <span class="text-xl font-bold gradient-text">Mentli</span>
             </div>
@@ -65,7 +86,8 @@
                 <a href="#solution" class="text-gray-600 hover:text-gray-900 font-medium transition">Solution</a>
                 <a href="#market" class="text-gray-600 hover:text-gray-900 font-medium transition">Market</a>
                 <a href="#founder" class="text-gray-600 hover:text-gray-900 font-medium transition">Founder</a>
-                <a href="#contact" class="px-4 py-2 gradient-bg text-white rounded-md hover:shadow-md transition">Get Started</a>
+                <a href="#contact" class="px-4 py-2 gradient-bg text-white rounded-md hover:shadow-md transition">Get
+                    Started</a>
             </div>
         </div>
     </nav>
@@ -83,7 +105,8 @@
                 </p>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-6xl mx-auto card-hover animate__animated animate__fadeIn animate__delay-3s">
+            <div
+                class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-6xl mx-auto card-hover animate__animated animate__fadeIn animate__delay-3s">
                 <div class="p-10">
                     <div class="flex flex-col lg:flex-row gap-12">
                         <div class="lg:w-1/2">
@@ -92,25 +115,37 @@
                                 <p>Traditional coaching models are broken:</p>
                                 <ul class="space-y-4">
                                     <li class="flex items-start">
-                                        <div class="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7.536 5.879a1 1 0 001.415 0 3 3 0 014.242 0 1 1 0 001.415-1.415 5 5 0 00-7.072 0 1 1 0 000 1.415z" clip-rule="evenodd" />
+                                        <div
+                                            class="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7.536 5.879a1 1 0 001.415 0 3 3 0 014.242 0 1 1 0 001.415-1.415 5 5 0 00-7.072 0 1 1 0 000 1.415z"
+                                                    clip-rule="evenodd" />
                                             </svg>
                                         </div>
                                         <span>Expensive guru models don't scale</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <div class="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7.536 5.879a1 1 0 001.415 0 3 3 0 014.242 0 1 1 0 001.415-1.415 5 5 0 00-7.072 0 1 1 0 000 1.415z" clip-rule="evenodd" />
+                                        <div
+                                            class="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7.536 5.879a1 1 0 001.415 0 3 3 0 014.242 0 1 1 0 001.415-1.415 5 5 0 00-7.072 0 1 1 0 000 1.415z"
+                                                    clip-rule="evenodd" />
                                             </svg>
                                         </div>
                                         <span>Most founders prefer peer advice over "experts"</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <div class="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7.536 5.879a1 1 0 001.415 0 3 3 0 014.242 0 1 1 0 001.415-1.415 5 5 0 00-7.072 0 1 1 0 000 1.415z" clip-rule="evenodd" />
+                                        <div
+                                            class="bg-indigo-100 text-indigo-800 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7.536 5.879a1 1 0 001.415 0 3 3 0 014.242 0 1 1 0 001.415-1.415 5 5 0 00-7.072 0 1 1 0 000 1.415z"
+                                                    clip-rule="evenodd" />
                                             </svg>
                                         </div>
                                         <span>No infrastructure exists to monetize peer wisdom at scale</span>
@@ -124,35 +159,44 @@
                                 <div class="space-y-6">
                                     <div class="flex items-start">
                                         <div class="bg-white p-2 rounded-lg shadow-sm mr-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 gradient-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 gradient-text"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                                             </svg>
                                         </div>
                                         <div>
                                             <h4 class="font-bold text-lg mb-1">Peer Matching Engine</h4>
-                                            <p class="text-gray-600">AI-powered compatibility matching based on business stage, challenges, and expertise</p>
+                                            <p class="text-gray-600">AI-powered compatibility matching based on business
+                                                stage, challenges, and expertise</p>
                                         </div>
                                     </div>
                                     <div class="flex items-start">
                                         <div class="bg-white p-2 rounded-lg shadow-sm mr-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 gradient-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 gradient-text"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                                             </svg>
                                         </div>
                                         <div>
                                             <h4 class="font-bold text-lg mb-1">Structured Frameworks</h4>
-                                            <p class="text-gray-600">Battle-tested session templates that drive measurable outcomes</p>
+                                            <p class="text-gray-600">Battle-tested session templates that drive
+                                                measurable outcomes</p>
                                         </div>
                                     </div>
                                     <div class="flex items-start">
                                         <div class="bg-white p-2 rounded-lg shadow-sm mr-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 gradient-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 gradient-text"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                             </svg>
                                         </div>
                                         <div>
                                             <h4 class="font-bold text-lg mb-1">Revenue Infrastructure</h4>
-                                            <p class="text-gray-600">Seamless payment processing and scheduling built for scale</p>
+                                            <p class="text-gray-600">Seamless payment processing and scheduling built
+                                                for scale</p>
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +212,7 @@
     <section id="market" class="py-16 px-6 lg:px-12 bg-white">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-16">The $7.5B Peer Coaching Opportunity</h2>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-gray-50 p-8 rounded-xl card-hover">
                     <div class="text-5xl font-bold gradient-text mb-4">62%</div>
@@ -180,7 +224,8 @@
                 </div>
                 <div class="bg-gray-50 p-8 rounded-xl card-hover">
                     <div class="text-5xl font-bold gradient-text mb-4">3.5x</div>
-                    <p class="text-gray-700">faster growth for businesses using peer networks (Harvard Business Review)</p>
+                    <p class="text-gray-700">faster growth for businesses using peer networks (Harvard Business Review)
+                    </p>
                 </div>
             </div>
         </div>
@@ -191,33 +236,45 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">How Mentli Creates Value</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're building the infrastructure for the peer economy</p>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're building the infrastructure for the peer
+                    economy</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 mb-16">
                 <div class="feature-card bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
                     <div class="feature-icon text-4xl gradient-text mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-4">For Coaches</h3>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Monetize hard-won experience</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Recurring revenue streams</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt-0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Built-in scheduling & payments</span>
                         </li>
@@ -225,27 +282,38 @@
                 </div>
                 <div class="feature-card bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
                     <div class="feature-icon text-4xl gradient-text mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-4">For Founders</h3>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Actionable advice from peers</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Proven frameworks that work</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Fraction of traditional coaching costs</span>
                         </li>
@@ -253,27 +321,38 @@
                 </div>
                 <div class="feature-card bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
                     <div class="feature-icon text-4xl gradient-text mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-4">For Investors</h3>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>First-mover in peer coaching infra</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Recurring SaaS + transaction revenue</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 mt=0.5"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
                             </svg>
                             <span>Founder with proven tech+business chops</span>
                         </li>
@@ -287,41 +366,57 @@
     <section id="founder" class="py-16 px-6 lg:px-12 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
-                <div class="lg:w-2/5 flex justify-center">
+                <div class="lg:w-2/5 flex flex-col items-center justify-center text-center lg:text-left">
+                    <!-- Intro Heading -->
+                    <h2 class="text-3xl font-bold text-indigo-600 mb-4">Hi! I'm Yinda</h2>
+
+                    <!-- Profile Image -->
                     <div class="relative">
-    
-                        <img src="pfp.jpg" alt="Profile Picture" />
-                             alt="Oyindamola Ibrahim" 
-                             class="profile-img w-74 h-74 object-cover">
-                        <div class="absolute -bottom-4 -right-4 bg-white px-6 py-3 rounded-full shadow-lg border border-gray-100">
+                        <img src="/pfp.jpg" alt="Oyindamola Ibrahim"
+                            class="profile-img w-74 h-74 object-cover rounded-xl shadow-md" />
+                        <div
+                            class="absolute -bottom-4 -right-4 bg-white px-6 py-3 rounded-full shadow-lg border border-gray-100">
                             <span class="font-bold gradient-text">Cloud Architect</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="lg:w-3/5">
-                    <h2 class="text-3xl font-bold mb-6">Oyindamola Ibrahim</h2>
                     <p class="text-xl text-gray-600 mb-6">Cloud & DevOps Engineer</p>
-                    
+
                     <div class="prose prose-lg text-gray-700 max-w-none">
-                        <p>I'm a <span class="font-semibold">Cloud Infrastructure Specialist</span> with a passion for building systems that <span class="font-semibold">scale both technically and economically</span>. My journey has taken me from architecting robust AWS environments to now building the infrastructure for human wisdom.</p>
-                        
+                        <p>I'm a <span class="font-semibold">Cloud Infrastructure Specialist</span> with a passion for
+                            building systems that <span class="font-semibold">scale both technically and
+                                economically</span>. My journey has taken me from architecting robust AWS environments
+                            to now building the infrastructure for human wisdom.</p>
+
                         <p class="mt-4">Here's what gets me out of bed in the morning:</p>
                         <ul class="mt-2 space-y-2">
-                            <li><span class="font-semibold">⚡ Lightning in a Bottle:</span> Designed AWS architectures that handle 50K+ RPM while reducing costs by 40%</li>
-                            <li><span class="font-semibold">🤖 Automation Alchemy:</span> Built CI/CD pipelines that cut deployment times from hours to minutes</li>
-                            <li><span class="font-semibold">📈 Growth Engineering:</span> My infrastructure work directly contributed to 35% client acquisition boosts</li>
+                            <li><span class="font-semibold">⚡ Lightning in a Bottle:</span> Designed AWS architectures
+                                that handle 50K+ RPM while reducing costs by 40%</li>
+                            <li><span class="font-semibold">🤖 Automation Alchemy:</span> Built CI/CD pipelines that cut
+                                deployment times from hours to minutes</li>
+                            <li><span class="font-semibold">📈 Growth Engineering:</span> My infrastructure work
+                                directly contributed to 35% client acquisition boosts</li>
                         </ul>
-                        
-                        <p class="mt-4">But here's the <span class="font-semibold italic">aha moment</span> that led to Mentli: <span class="bg-indigo-50 px-2 py-1 rounded">The most valuable untapped resource isn't computing power—it's human experience.</span></p>
 
-                        <p class="mt-4">The world’s most valuable business advice never comes from gurus, it comes from peers who’ve been in the trenches.<span class="bold"> We’re making that wisdom scalable.</span></p>
-                        
-                        
-                        <p class="mt-4">I'm building Mentli because I believe <span class="font-semibold">peer wisdom should flow as freely as API calls</span>. Just as AWS abstracted infrastructure complexity, we're abstracting knowledge exchange.</p>
-                        
-                        <p class="mt-4 font-medium">Now at AltSchool Africa, I’m channeling that mindset into this project: a fusion of cloud engineering and economic empowerment, designed to be  <span class="italic"> bold, scalable, and relentlessly practical. </span> </p>
+                        <p class="mt-4">But here's the <span class="font-semibold italic">aha moment</span> that led to
+                            Mentli: <span class="bg-indigo-50 px-2 py-1 rounded">The most valuable untapped resource
+                                isn't computing power—it's human experience.</span></p>
+
+                        <p class="mt-4">The world’s most valuable business advice never comes from gurus, it comes from
+                            peers who’ve been in the trenches.<span class="bold"> We’re making that wisdom
+                                scalable.</span></p>
+
+                        <p class="mt-4">I'm building Mentli because I believe <span class="font-semibold">peer wisdom
+                                should flow as freely as API calls</span>. Just as AWS abstracted infrastructure
+                            complexity, we're abstracting knowledge exchange.</p>
+
+                        <p class="mt-4 font-medium">Now at AltSchool Africa, I’m channeling that mindset into this
+                            project: a fusion of cloud engineering and economic empowerment, designed to be <span
+                                class="italic"> bold, scalable, and relentlessly practical. </span> </p>
                     </div>
-                    
+
                     <div class="mt-8 flex flex-wrap gap-4">
                         <div class="bg-gray-50 px-4 py-2 rounded-lg">
                             <span class="text-sm font-medium text-gray-500">Specialties:</span>
@@ -337,6 +432,7 @@
         </div>
     </section>
 
+
     <!-- CTA Section -->
     <section id="contact" class="py-20 px-6 lg:px-12 gradient-bg text-white">
         <div class="max-w-4xl mx-auto text-center">
@@ -348,19 +444,24 @@
                 <h3 class="text-xl font-bold mb-4">Get Early Access</h3>
                 <form class="space-y-4">
                     <div>
-                        <input type="text" placeholder="Full Name" class="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white placeholder-indigo-200">
+                        <input type="text" placeholder="Full Name"
+                            class="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white placeholder-indigo-200">
                     </div>
                     <div>
-                        <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white placeholder-indigo-200">
+                        <input type="email" placeholder="Email"
+                            class="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white placeholder-indigo-200">
                     </div>
                     <div>
-                        <select class="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white text-indigo-100">
+                        <select
+                            class="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white text-indigo-100">
                             <option class="bg-indigo-600">I'm a founder looking for peer advice</option>
                             <option class="bg-indigo-600">I have experience to share</option>
                             <option class="bg-indigo-600">Just curious about Mentli</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-md hover:bg-gray-100 transition">Join Waitlist</button>
+                    <button type="submit"
+                        class="w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-md hover:bg-gray-100 transition">Join
+                        Waitlist</button>
                 </form>
             </div>
         </div>
@@ -371,8 +472,10 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-2 mb-6 md:mb-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                     <span class="text-lg font-bold text-white">Mentli</span>
                 </div>
@@ -388,4 +491,5 @@
         </div>
     </footer>
 </body>
+
 </html>
